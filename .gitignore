@@ -1,0 +1,5 @@
+*
+!.gitignore
+!PKGBUILD
+!makepkg.conf
+!pacman.conf
