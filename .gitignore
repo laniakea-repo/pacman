@@ -3,3 +3,4 @@
 !PKGBUILD
 !makepkg.conf
 !pacman.conf
+!alpm.sysusers
