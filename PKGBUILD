@@ -3,7 +3,7 @@
 
 pkgname=pacman
 pkgver=7.0.0.r6.gc685ae6
-pkgrel=2
+pkgrel=3
 # use annotated tag and patch level commit from release branch (can be empty for no patches)
 _git_tag=7.0.0
 _git_patch_level_commit=c685ae6412af04cae1eaa5d6bda8c277c7ffb8c8
@@ -126,7 +126,7 @@ package() {
   install -m644 "$srcdir/makepkg.conf" "$pkgdir/etc"
   install -D -m644 "$srcdir/alpm.sysusers" "${pkgdir}"/usr/lib/sysusers.d/alpm.conf
   install -m644 "$srcdir/rust.conf" "$pkgdir/etc/makepkg.conf.d"
-  install -m644 "$srcdir/default-mirrorlist" "$pkgdir/etc/pacman.d"
+  install -D -m644 "$srcdir/default-mirrorlist" "$pkgdir/etc/pacman.d/default-mirrorlist"
 
   local wantsdir="$pkgdir/usr/lib/systemd/system/sockets.target.wants"
   install -dm755 "$wantsdir"
